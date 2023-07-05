@@ -62,7 +62,10 @@ async function fetchCharacterImage(animeCharacter) {
 
 async function fetchRandomQuote() {
   let attempts = 0;
-  const apiUrl = 'http://animechan.melosh.space/random';
+  const apiUrl = 'https://animechan.xyz/api/random';
+  //this code could be simplified, but the owner of the API previously starting hosting a backup of the site on an http site so I
+  //I edited my original code to work as mixed content/security site. I decided to keep the mixed content work around code as a fail safe in the event
+  //that the api is hosted on an http site in the future.
 
   while (attempts < 10) {
     try {
